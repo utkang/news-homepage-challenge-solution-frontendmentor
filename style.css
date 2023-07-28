@@ -1,0 +1,238 @@
+/* Base Start */
+:root {
+  /* ### Primary Colors */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  /* ### Neutral Colors */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--off-white);
+}
+/* Base End */
+
+/* Helper */
+.w-100 {
+  width: 100%;
+}
+.noBorderBt {
+  border-bottom: none;
+}
+/* Helper End */
+
+/* Nav */
+nav,
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+nav {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+nav > ul {
+  list-style: none;
+  margin: 20px 0 20px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
+nav > ul > li > a {
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+}
+nav > ul > li > a:hover {
+  color: var(--soft-red);
+}
+/* Nav end */
+
+/* Main Section start */
+.container {
+  margin-top: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.container > section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section > article {
+  display: flex;
+  gap: 30px;
+}
+.container > section > article > .item {
+  flex: 1;
+}
+section > article > header > h1 {
+  font-size: 4rem;
+  margin: 20px 0 0 0;
+
+  color: var(--very-dark-blue);
+}
+section > article > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section > article > .item > p {
+  color: var(--dark-grayish-blue);
+  margin-top: 20px;
+  line-height: 30px;
+}
+.button {
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+
+  display: inline-block;
+  padding: 15px 30px;
+}
+.button:hover {
+  background-color: var(--very-dark-blue);
+}
+/* Main Section end */
+
+/* Aside start */
+.container > aside {
+  background-color: var(--very-dark-blue);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.container > aside > h2 {
+  color: var(--soft-orange);
+  font-size: 2rem;
+  margin: 20px 0 0 0;
+}
+aside > article {
+  border-bottom: 1px solid var(--grayish-blue);
+}
+aside > article > a {
+  text-decoration: none;
+}
+aside > article > a > h3 {
+  color: var(--off-white);
+  font-size: 1.5rem;
+}
+aside > article > a > h3:hover {
+  color: var(--soft-orange);
+}
+aside > article > p {
+  color: var(--grayish-blue);
+  margin: 30px 0;
+}
+/* Aside end */
+
+/* Footer start */
+footer.container {
+  display: flex;
+  margin-top: 60px;
+}
+footer.container > .item {
+  /* I set max-width for a better alignment. */
+  max-width: 328.34px;
+
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  gap: 30px;
+}
+footer.container > .item > img {
+  flex: 1;
+  width: 100px;
+  max-height: 120px;
+}
+footer.container > .item > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex: 2;
+}
+footer.container > .item > .info > h1 {
+  color: var(--grayish-blue);
+  margin: 0;
+}
+footer.container > .item > .info > a {
+  text-decoration: none;
+}
+footer.container > .item > .info > a > h3 {
+  color: var(--very-dark-blue);
+  margin: 0;
+}
+footer.container > .item > .info > a > h3:hover {
+  color: var(--soft-red);
+}
+footer.container > .item > .info > p {
+  color: var(--dark-grayish-blue);
+  margin: 0;
+}
+
+/* Mobile devices up to 500 px*/
+@media (max-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  nav,
+  .container {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 10px auto;
+    gap: 0px;
+  }
+  nav > ul {
+    justify-content: center;
+    gap: 15px;
+
+    padding: 0;
+  }
+  /* Main */
+  .container {
+    gap: 50px;
+  }
+  .container > section {
+    justify-content: center;
+  }
+  .container > section > article {
+    gap: 0px;
+  }
+  .container > section > article > header.item > h1 {
+    font-size: 3rem;
+  }
+  .container > section > article {
+    flex-direction: column;
+  }
+  footer.container {
+    margin-bottom: 30px;
+  }
+}
+/* Mobile End */
